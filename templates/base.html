@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Finagr</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+</head>
+<body>
+	<header>
+
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href='#'>Новости</a></li>
+            <li><a href='#'>Анализатор</a></li>
+            <li><a href='#'>Статистика</a></li>
+            <li><a href='#'>Портфолио</a></li>
+            <li><a>{{time|date:"h:m d.m.y"}} </a></li>
+            <li><a href='#'>Войти</a></li>
+            <li><a href='#'>Регистрация</a></li>
+        </ul>
+    </nav>
+
+    <section>
+        {% block content %}
+
+        {% endblock %}
+    </section>
+
+    <footer>
+
+    </footer>
+</body>
+</html>
