@@ -1,4 +1,12 @@
 @import url(http://fonts.googleapis.com/css?family=PT+Sans:400,700);
+html {
+    height: 100%;
+    background-color: #f2f2f2;
+    }
+
+body {
+      box-sizing: border-box;
+      }
 h1{
   font:400 40px 'pt sans',sans-serif;
   text-align:center;
@@ -7,9 +15,10 @@ nav a{
   text-decoration:none;
 }
 nav{
-  height:70px;
-  background:#222;
+  height:40px;
+  background:#808080;
   position:relative;
+
 }
 nav>ul{
   position:relative;
@@ -24,17 +33,10 @@ nav>ul>li>ul{
   margin:0;
   list-style:none;
 }
-nav>ul>li:hover>ul li a{
-  opacity:1;
-  height:50px;
-   transition:all .3s linear;
-  -o-transition:all .3s linear;
-  -moz-transition:all .3s linear;
-  -webkit-transition:all .3s linear;
-}
+
 nav>ul>li>ul a{
   display:block;
-  color:#222;
+  color:#e6e6e6;
   width:150px;
   line-height:50px !important;
   font:700 14px 'pt sans',sans-serif;
@@ -58,28 +60,60 @@ nav>ul>li>a{
   padding:0 20px;
   color:#fff;
   display:block;
-  line-height:70px !important;
-  font:400 15px 'PT Sans', sans-serif;
+  line-height:40px !important;
+  font:400 12px 'PT Sans', sans-serif;
   text-transform:uppercase;
   text-decoration:none;
 }
-.lamp span{
-  display:block;
-  height:4px;
-  background:#ee6666;
-  position: relative;
+
+.right {
+color: red;
+text-align: right;
+float: right;}
+
+.menu:hover {
+    background-color: #404040;
 }
-.lamp span:after {
-	bottom: 100%;
-	left: 50%;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-	border-color: rgba(238, 102, 102, 0);
-	border-bottom-color: #ee6666;
-	border-width: 4px;
-	margin-left: -4px;
+
+
+#search {
+    margin-top:10px;
+    margin-bottom:10px;
 }
+
+.register {
+    background-color: #6fdc6f;
+}
+
+.register:hover {
+    background-color: #32cd32;
+}
+
+/*****************HEADER**********************/
+
+.logo {
+    text-align: left;
+    font-style:bold;
+    margin: 10px 10px 0px 0px;
+}
+.logo a {
+    text-decoration: none;
+    color: #262626;
+}
+/*********************************************/
+
+/*****************FOOTER**********************/
+footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #efefef;
+  text-align: center;
+}
+
+footer p {
+    font-size: 12px;
+}
+/*********************************************/

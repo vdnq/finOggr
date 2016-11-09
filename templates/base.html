@@ -8,18 +8,19 @@
 </head>
 <body>
 	<header>
-
+        <h1 class="logo"><a href="/">LOGO</a></h1>
+    <form action="#"><input type="search" id="search" placeholder="Поиск по сайту"></form>
     </header>
 
     <nav>
         <ul>
-            <li><a href='#'>Новости</a></li>
-            <li><a href='#'>Анализатор</a></li>
-            <li><a href='#'>Статистика</a></li>
-            <li><a href='#'>Портфолио</a></li>
-            <li><a>{{time|date:"h:m d.m.y"}} </a></li>
-            <li><a href='#'>Войти</a></li>
-            <li><a href='#'>Регистрация</a></li>
+            <li><a href='#' class="menu">Новости</a></li>
+            <li><a href='#' class="menu">Анализатор</a></li>
+            <li><a href='#' class="menu">Статистика</a></li>
+            <li><a href='/portfolio' class="menu">Портфолио</a></li>
+            <li class="right" class="register"><a href='#' class="register">Регистрация</a></li>
+            <li class="right"><a href='#' class="menu">Войти</a></li>
+            <li class="right"><a>{{time|date:"h:m d.m.y"}} </a></li>
         </ul>
     </nav>
 
@@ -30,7 +31,7 @@
     </section>
 
     <footer>
-
+        <p>2016 &copy</p>
     </footer>
 </body>
 </html>
