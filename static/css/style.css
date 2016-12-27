@@ -102,18 +102,19 @@ float: right;}
 }
 /*********************************************/
 
-/*****************FOOTER**********************/
-footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
-  background-color: #efefef;
-  text-align: center;
+/*****************NEWS*************************/
+
+.newsfeed {
+    font:400 20px 'PT Sans', sans-serif;
 }
 
-footer p {
-    font-size: 12px;
+
+/*****************FOOTER**********************/
+
+footer {
+    position: relative;
+	margin-top: -150px; /* отрицательное значение высоты футера */
+	height: 150px;
+	clear:both;
 }
 /*********************************************/

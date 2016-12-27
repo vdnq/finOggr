@@ -20,7 +20,7 @@
             <li><a href='/portfolio' class="menu">Портфолио</a></li>
             <li class="right" class="register"><a href='#' class="register">Регистрация</a></li>
             <li class="right"><a href='#' class="menu">Войти</a></li>
-            <li class="right"><a>{{time|date:"h:m d.m.y"}} </a></li>
+            <li class="right"><a>{% now "jS F Y H:i" %} </a></li>
         </ul>
     </nav>
 
@@ -30,8 +30,5 @@
         {% endblock %}
     </section>
 
-    <footer>
-        <p>2016 &copy</p>
-    </footer>
 </body>
 </html>
