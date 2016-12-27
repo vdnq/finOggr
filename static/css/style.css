@@ -100,15 +100,16 @@ float: right;}
     text-decoration: none;
     color: #262626;
 }
-/*********************************************/
 
 /*****************NEWS*************************/
-
-.newsfeed {
-    font:400 20px 'PT Sans', sans-serif;
+#newsfeed {
+    margin-top: 15px;
+    float: right;
 }
-
-
+.news {
+    font:400 12px 'PT Sans', sans-serif;
+    margin-top: 3px;
+}
 /*****************FOOTER**********************/
 
 footer {

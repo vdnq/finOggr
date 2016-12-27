@@ -1,11 +1,14 @@
 {% extends "base.html" %}
-{% load staticfiles %}
+
 
 {% block content %}
 
-{% for i in news %}
 
-<div class="newsfeed">{{i.added_at|date:"H:i"}} <a href="{{ i.news_url }}">{{i.news_short}}</a></div>
+<div id="newsfeed">
+    {% for i in news|slice:":15" %}
+    <div class="news">{{i.added_at|date:"d.m H:i"}} <a href="{{ i.news_url }}">{{i.news_short|truncatechars:60}}</a></div>
+    {% endfor %}
+</div>
 
-{% endfor %}
+
 {% endblock %}
