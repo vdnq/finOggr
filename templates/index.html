@@ -5,7 +5,7 @@
 
 
 <div id="newsfeed">
-    {% for i in news|slice:":15" %}
+    {% for i in news|slice:":10" %}
     <div class="news">{{i.added_at|date:"d.m H:i"}} <a href="{{ i.news_url }}">{{i.news_short|truncatechars:60}}</a></div>
     {% endfor %}
 </div>
