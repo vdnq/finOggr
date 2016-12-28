@@ -3,7 +3,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>finOggr</title>
+	<title>{% block title %}{% endblock title %} finOggr</title>
 	<link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
 </head>
 <body>
@@ -18,8 +18,13 @@
             <li><a href='#' class="menu">Анализатор</a></li>
             <li><a href='#' class="menu">Статистика</a></li>
             <li><a href='/portfolio' class="menu">Портфолио</a></li>
-            <li class="right" class="register"><a href='#' class="register">Регистрация</a></li>
-            <li class="right"><a href='#' class="menu">Войти</a></li>
+            {% if not user.is_authenticated %}
+            <li class="right" class="register"><a href="{% url 'registration' %}" class="register">Регистрация</a></li>
+            <li class="right"><a href="{% url 'login' %}" class="menu">Войти</a></li>
+            {% else %}
+            <li class="right"><a href="{% url 'account' %}" class="register">{{user.username}}</a></li>
+            <li class="right"><a href="{% url 'logout' %}" class="menu">Выйти</a></li>
+            {% endif %}
             <li class="right"><a>{% now "jS F Y H:i" %} </a></li>
         </ul>
     </nav>
