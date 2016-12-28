@@ -6,7 +6,7 @@ from news.models import NewsFeed
 
 def index(request):
     newsfeed = NewsFeed.objects.all().order_by("id")[::-1]
-    return render_to_response('index.html', {'time': datetime.now(), 'news': newsfeed})
+    return render(request, 'index.html', {'time': datetime.now(), 'news': newsfeed})
 
 def portfolio(request):
-    return render_to_response('portfolio.html', {'time': datetime.now()})
+    return render(request, 'portfolio.html', {'time': datetime.now()})
