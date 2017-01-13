@@ -21,5 +21,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', index),
     url(r'^portfolio/$', portfolio),
+    url(r'^company', include('companies.urls')),
     url(r'^account', include('user_manager.urls')),
 ]
