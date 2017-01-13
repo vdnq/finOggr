@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{ company_id.company_short_name }} </h2>
+<p><span>Сайт компании:</span> <a href="{{ company_id.official_site }}" target="_blank">{{ company_id.official_site }}</a></p>
+<p><span>Сектор:</span> {{ company_id.industry }}</p>
+<p><span>Руководство:</span> {{ company_id.ceo }}</p>
+<p>{{ company_id.company_description  }}</p>
+{% endblock %}
